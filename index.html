@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ead8b8">
+  <meta name="description" content="A wedding invitation for Muhammad Mahad and Mrs. Mahad.">
+  <title>Muhammad Mahad &amp; Mrs. Mahad — Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+  <div class="opening" id="opening" aria-label="Open wedding invitation">
+    <div class="opening-arch">
+      <div class="seal-flower" aria-hidden="true">✦</div>
+      <p class="opening-kicker">YOU ARE CORDIALLY INVITED</p>
+      <p class="opening-names">Muhammad Mahad<br><span>&amp;</span><br>Mrs. Mahad</p>
+      <button class="open-invite" id="openInvite" type="button">Open Invitation <span aria-hidden="true">✧</span></button>
+      <p class="opening-hint">A celebration of love &amp; togetherness</p>
+    </div>
+  </div>
+
+  <canvas id="cursorCanvas" aria-hidden="true"></canvas>
+  <div class="tap-ripple-layer" id="tapRippleLayer" aria-hidden="true"></div>
+  <div class="ambient-effects" id="ambientEffects" aria-hidden="true">
+    <div class="glitter"></div>
+    <div class="flower-field" id="flowerField"></div>
+  </div>
+  <svg class="flight-path" id="flightPath" aria-hidden="true" preserveAspectRatio="none">
+    <path id="planeBase" fill="none"></path>
+    <path id="planeTravelled" fill="none"></path>
+    <g id="planeGroup">
+      <path d="M2 18 L65 2 L48 22 L39 48 L29 27 Z" fill="#a87842" stroke="#fff6e8" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M29 27 L65 2 L39 48 L35 29 Z" fill="#f4dfbd"/>
+      <path d="M29 27 L12 34 L2 18 Z" fill="#d8b17b"/>
+      <path d="M39 48 L42 31" stroke="#fff8ec" stroke-width="2"/>
+      <path d="M-5 15 Q-17 2 -27 15 Q-18 25 -5 15" fill="none" stroke="#a87842" stroke-width="2"/>
+    </g>
+  </svg>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Back to top">M <span>&amp;</span> M</a>
+    <nav aria-label="Main navigation">
+      <a href="#celebration">Celebration</a>
+      <a href="#events">Events</a>
+      <a href="#gallery">Gallery</a>
+    </nav>
+    <a class="nav-rsvp" href="#events">The Details</a>
+  </header>
+
+  <main>
+    <section class="hero section-shell" id="home">
+      <div class="hero-art" aria-hidden="true">
+        <div class="hero-image-wash"></div>
+        <div class="hero-ornament"></div>
+      </div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">WITH JOY IN OUR HEARTS</p>
+        <div class="ornament-line"><span></span> ❧ <span></span></div>
+        <h1>Muhammad Mahad <em>&amp;</em><br>Mrs. Mahad</h1>
+        <p class="hero-subtitle">Wedding Invitation</p>
+        <p class="hero-date">27 December 2026 <span>·</span> 8:00 PM</p>
+        <a class="gold-button" href="#countdown">Save the Date <span>↓</span></a>
+        <p class="scroll-note">SCROLL TO EXPLORE</p>
+      </div>
+      <div class="hero-couple reveal">
+        <img src="assets/photo3.jpg" alt="Illustration of a bride and groom in traditional wedding attire">
+      </div>
+    </section>
+
+    <section class="intro section-shell" id="celebration">
+      <div class="section-heading reveal">
+        <p class="eyebrow">A NEW CHAPTER BEGINS</p>
+        <h2>Two hearts, <em>one beautiful</em> journey</h2>
+        <p>With grateful hearts, we invite you to share in the joy of our wedding celebrations.</p>
+        <div class="ornament-line"><span></span> ✧ <span></span></div>
+      </div>
+      <div class="couple-cards">
+        <article class="person-card reveal">
+          <div class="person-image"><img src="assets/photo2.jpg" alt="Wedding couple illustration in ivory attire"></div>
+          <p class="eyebrow">THE GROOM</p>
+          <h3>Muhammad Mahad</h3>
+        </article>
+        <div class="ampersand reveal" aria-hidden="true">&amp;</div>
+        <article class="person-card reveal">
+          <div class="person-image bride-image"><img src="assets/photo1.jpg" alt="Bride and groom illustration in maroon wedding attire"></div>
+          <p class="eyebrow">THE BRIDE</p>
+          <h3>Mrs. Mahad</h3>
+        </article>
+      </div>
+    </section>
+
+    <section class="countdown-section section-shell" id="countdown">
+      <div class="countdown-panel reveal">
+        <p class="eyebrow">THE WEDDING CELEBRATION</p>
+        <h2>Counting down to <em>forever</em></h2>
+        <p class="countdown-date">27 December 2026 · 8:00 PM</p>
+        <div class="countdown" id="countdownClock" aria-live="polite">
+          <div><strong id="days">—</strong><span>DAYS</span></div>
+          <i>:</i>
+          <div><strong id="hours">—</strong><span>HOURS</span></div>
+          <i>:</i>
+          <div><strong id="minutes">—</strong><span>MINUTES</span></div>
+          <i>:</i>
+          <div><strong id="seconds">—</strong><span>SECONDS</span></div>
+        </div>
+        <p class="countdown-note" id="countdownNote">A day to cherish, a memory to keep.</p>
+      </div>
+    </section>
+
+    <section class="events-section section-shell" id="events">
+      <div class="section-heading reveal">
+        <p class="eyebrow">PLEASE JOIN US</p>
+        <h2>Wedding <em>celebrations</em></h2>
+        <p>Three moments, one wonderful celebration.</p>
+      </div>
+      <div class="event-timeline">
+        <article class="event-card reveal">
+          <div class="event-number">01</div>
+          <div class="event-copy"><p class="eyebrow">THE FIRST CELEBRATION</p><h3>Mehndi</h3><p class="event-date">26 Dec 2026 <span>·</span> Saturday</p><p class="event-time">8:00 PM</p></div>
+          <div class="event-flower" aria-hidden="true">✿</div>
+        </article>
+        <article class="event-card reveal">
+          <div class="event-number">02</div>
+          <div class="event-copy"><p class="eyebrow">THE WEDDING DAY</p><h3>Barat</h3><p class="event-date">27 Dec 2026 <span>·</span> Sunday</p><p class="event-time">8:00 PM</p></div>
+          <div class="event-flower" aria-hidden="true">❀</div>
+        </article>
+        <article class="event-card reveal">
+          <div class="event-number">03</div>
+          <div class="event-copy"><p class="eyebrow">THE RECEPTION</p><h3>Walima</h3><p class="event-date">28 Dec 2026 <span>·</span> Monday</p><p class="event-time">7:30 PM</p></div>
+          <div class="event-flower" aria-hidden="true">✿</div>
+        </article>
+      </div>
+      <div class="calendar-action reveal">
+        <button class="gold-button" id="addCalendar" type="button">Add Celebrations to Calendar <span>↓</span></button>
+      </div>
+    </section>
+
+    <section class="gallery-section section-shell" id="gallery">
+      <div class="section-heading reveal">
+        <p class="eyebrow">MOMENTS TO REMEMBER</p>
+        <h2>A little <em>love story</em></h2>
+        <p>A few beautiful illustrations for a day filled with meaning.</p>
+      </div>
+      <div class="gallery-grid">
+        <button class="gallery-item gallery-tall reveal" data-index="0" aria-label="View wedding illustration 1"><img src="assets/photo1.jpg" alt="Bride and groom in maroon traditional wedding outfits"></button>
+        <button class="gallery-item reveal" data-index="1" aria-label="View wedding illustration 2"><img src="assets/photo2.jpg" alt="Bride and groom in elegant ivory wedding outfits"></button>
+        <button class="gallery-item reveal" data-index="2" aria-label="View wedding illustration 3"><img src="assets/photo3.jpg" alt="Bride and groom in a romantic wedding portrait"></button>
+      </div>
+    </section>
+
+    <section class="closing section-shell">
+      <div class="closing-art reveal"><img src="assets/photo3.jpg" alt="Wedding couple illustration"></div>
+      <div class="closing-copy reveal">
+        <p class="eyebrow">WITH LOVE &amp; GRATITUDE</p>
+        <h2>We look forward to<br><em>celebrating with you</em></h2>
+        <p>Your presence will make our celebration even more special.</p>
+        <button class="gold-button lantern-button" id="wishLantern" type="button">Release a Wish Lantern <span>✧</span></button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-monogram">M <span>&amp;</span> M</div>
+    <p class="footer-names">Muhammad Mahad <span>&amp;</span> Mrs. Mahad</p>
+    <p>27 December 2026</p>
+    <div class="ornament-line"><span></span> ❧ <span></span></div>
+    <p class="footer-small">MADE WITH LOVE</p>
+  </footer>
+
+  <section class="music-player" id="musicPlayer" aria-label="Wedding song player">
+    <div class="music-player-top">
+      <div class="music-disc-wrap" aria-hidden="true">
+        <div class="music-disc"><span>♫</span></div>
+        <span class="disc-sparkle">✦</span>
+      </div>
+      <div class="music-info">
+        <span class="music-kicker">A SOUNDTRACK FOR FOREVER</span>
+        <strong id="musicTitle">Phullaan Naal Sajjeya Jehda</strong>
+        <span id="musicArtist">Sunehra · Lost Stories Music · Jai Dhir</span>
+        <span id="musicStatus" aria-live="polite">Trying to start your song…</span>
+        <div class="music-visualizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+      <button class="music-toggle" id="musicToggle" type="button" aria-label="Play or pause wedding song"><span>Ⅱ</span></button>
+    </div>
+    <div class="music-trackline" aria-hidden="true"><span id="musicProgress"></span></div>
+    <video id="weddingVideo" class="wedding-audio-source" preload="auto" playsinline webkit-playsinline>
+      <source src="assets/phullaan-naal-sajjeya-jehda.mp4" type="video/mp4">
+    </video>
+    <div class="music-player-note">♪ MADE FOR MUHAMMAD MAHAD &amp; MRS. MAHAD ♪</div>
+  </section>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image">×</button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous image">‹</button>
+    <img id="lightboxImage" alt="">
+    <button class="lightbox-next" id="lightboxNext" aria-label="Next image">›</button>
+    <p id="lightboxCounter">1 / 3</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
