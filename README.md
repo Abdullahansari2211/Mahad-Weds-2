@@ -1,6 +1,6 @@
 # Muhammad Mahad & Mrs. Mahad — Wedding Invitation
 
-A responsive wedding invitation website with a warm ivory, champagne and antique-gold theme.
+A responsive wedding invitation website with a warm ivory, champagne and antique gold theme.
 
 ## Folder structure
 
